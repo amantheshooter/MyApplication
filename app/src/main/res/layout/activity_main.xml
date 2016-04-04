@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout xmlns:rsb="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/seekbarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:background="@android:color/black"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="RangeSeekbar from xml with ranges set with float value"
+            android:textColor="@android:color/white" />
+
+        <com.yahoo.mobile.client.android.util.rangeseekbar.RangeSeekBar
+            android:id="@+id/rangeSeekbar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            rsb:absoluteMaxValue="999.99"
+            rsb:absoluteMinValue="0.0" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:text="RangeSeekbar from programmatically with ranges set"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>
